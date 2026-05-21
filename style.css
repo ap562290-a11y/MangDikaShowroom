@@ -1,0 +1,80 @@
+/* Pengaturan Efek Scroll Halus */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background Hero Section */
+.header-bg {
+    background-image: url('img/hero-bg.jpg');
+}
+
+/* Lingkaran Ikon di Bagian Keunggulan */
+.icon-circle {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f59e0b; /* Warna Amber-500 */
+    color: #0f172a; /* Warna Slate-950 */
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Efek Interaktif Saat Kartu Keunggulan Disorot (Hover) */
+.animate-card:hover .icon-circle {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.animate-card {
+    transition: all 0.3s ease;
+}
+
+.animate-card:hover {
+    background-color: #1e293b; /* Slate-800 menjadi sedikit lebih terang */
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   STYLE KEUNGGULAN PREMIUM & LUXURY
+   ========================================== */
+
+/* Kartu Utama Berbasis Glassmorphism */
+.premium-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px border;
+    border-color: rgba(51, 65, 85, 0.3);
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efek Interaktif Ketika Kartu Disorot (Hover) */
+.premium-card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border-color: rgba(245, 158, 11, 0.4); /* Border berubah warna amber menyala halus */
+    box-shadow: 0 20px 40px -20px rgba(245, 158, 11, 0.15); /* Efek Amber Glow */
+}
+
+/* Kotak Wadah Ikon Mewah */
+.premium-icon-box {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); /* Gradasi Emas/Amber */
+    color: #0f172a; /* Slate 950 */
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px -6px rgba(245, 158, 11, 0.4);
+    transition: all 0.4s ease;
+}
+
+/* Efek Gerakan Ikon Saat Kartu Utama di Hover */
+.premium-card:hover .premium-icon-box {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 12px 24px -6px rgba(245, 158, 11, 0.6);
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangDikaShowroom | Jual Beli Mobil & Motor Berkualitas</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-amber-500">
+                <i class="fa-solid fa-car-side mr-2"></i>MangDika<span class="text-white">Showroom</span>
+            </a>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#" class="hover:text-amber-500 transition">Beranda</a>
+                <a href="#katalog" class="hover:text-amber-500 transition">Katalog</a>
+                <a href="#keunggulan" class="hover:text-amber-500 transition">Keunggulan</a>
+                <a href="#kontak" class="hover:text-amber-500 transition">Kontak</a>
+            </div>
+            <a href="https://wa.me/6281234567890" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2 transition text-sm">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi Kami
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative bg-slate-800 text-white py-24 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-cover bg-center header-bg"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
+            <span class="bg-amber-500 text-slate-950 text-xs font-bold uppercase px-3 py-1 rounded-full shadow">Pusat Kendaraan Berkualitas</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight">
+                Temukan Mobil & Motor Impian Anda di <span class="text-amber-500">MangDika</span>
+            </h1>
+            <p class="text-lg text-gray-300 mb-8">
+                Proses cepat, surat-surat dijamin aman, dan kondisi kendaraan siap pakai dengan garansi terbaik.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#katalog" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-3 rounded-lg transition shadow-lg">
+                    Mulai Cari Kendaraan
+                </a>
+                <a href="#kontak" class="border-2 border-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-3 rounded-lg transition">
+                    Lokasi Showroom
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="katalog" class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-slate-900">Katalog Kendaraan</h2>
+            <p class="text-gray-500 mt-2">Gunakan filter di sebelah kiri untuk mempermudah pencarian Anda</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            
+            <div class="lg:col-span-1">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 sticky top-24">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-amber-500"></i> Filter Pencarian
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Cari Nama / Model</label>
+                            <div class="relative">
+                                <input type="text" id="filter-kata-kunci" placeholder="Ketik misal: Civic..." class="w-full bg-gray-50 border border-gray-300 rounded p-2 pl-8 focus:outline-none focus:border-amber-500 text-sm">
+                                <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-3 text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Jenis Kendaraan</label>
+                            <select id="filter-jenis" class="w-full bg-gray-50 border border-gray-300 rounded p-2 focus:outline-none focus:border-amber-500 text-sm">
+                                <option value="semua">Semua Jenis</option>
+                                <option value="mobil">Mobil Only</option>
+                                <option value="motor">Motor Only</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Merek</label>
+                            <select id="filter-merek" class="w-full bg-gray-50 border border-gray-300 rounded p-2 focus:outline-none focus:border-amber-500 text-sm">
+                                <option value="semua">Semua Merek</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Yamaha">Yamaha</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Kondisi</label>
+                            <select id="filter-kondisi" class="w-full bg-gray-50 border border-gray-300 rounded p-2 focus:outline-none focus:border-amber-500 text-sm">
+                                <option value="semua">Semua Kondisi</option>
+                                <option value="baru">Baru</option>
+                                <option value="bekas">Bekas</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-gray-400 text-center">
+                        <i class="fa-solid fa-bolt text-amber-500 mr-1"></i> Katalog merespon otomatis.
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3">
+                <div id="grid-kendaraan" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+<section id="keunggulan" class="relative bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 text-white py-24 overflow-hidden border-t border-slate-800">
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs font-bold tracking-widest uppercase border border-amber-500/30 px-3 py-1 rounded-full bg-amber-500/5 backdrop-blur-sm">
+                    Layanan Eksekutif
+                </span>
+                <h2 class="text-3xl md:text-4xl font-black mt-4 tracking-tight">Mengapa Harus <span class="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">MangDikaShowroom</span>?</h2>
+                <p class="text-gray-400 mt-3 text-sm md:text-base font-light">Kami menetapkan standar tinggi demi menghadirkan kemewahan, kenyamanan, dan jaminan kualitas di setiap perjalanan Anda.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="p-8 rounded-2xl premium-card backdrop-blur-md flex flex-col justify-between group">
+                    <div>
+                        <div class="premium-icon-box mb-6 group-hover:shadow-amber-500/20">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-100 tracking-wide group-hover:text-amber-400 transition-colors duration-300">Garansi Mesin Eksklusif</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Semua unit mobil dan motor bekas di showroom kami telah melalui inspeksi ketat dan dijamin oleh garansi mesin demi ketenangan berkendara Anda.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center text-xs font-semibold text-amber-500 tracking-wider uppercase opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                        Sertifikasi Resmi <i class="fa-solid fa-circle-check ml-2"></i>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-2xl premium-card backdrop-blur-md flex flex-col justify-between group">
+                    <div>
+                        <div class="premium-icon-box mb-6 group-hover:shadow-amber-500/20">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-100 tracking-wide group-hover:text-amber-400 transition-colors duration-300">Legalitas & Dokumen Absolut</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Verifikasi keaslian menyeluruh untuk STNK, BPKB, hingga faktur pembelian. Kami menjamin status hukum kendaraan 100% aman dan valid.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center text-xs font-semibold text-amber-500 tracking-wider uppercase opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                        Jaminan Transparansi <i class="fa-solid fa-circle-check ml-2"></i>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-2xl premium-card backdrop-blur-md flex flex-col justify-between group">
+                    <div>
+                        <div class="premium-icon-box mb-6 group-hover:shadow-amber-500/20">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-100 tracking-wide group-hover:text-amber-400 transition-colors duration-300">Transaksi Finansial Fleksibel</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Nikmati penawaran harga terbaik dengan opsi sistem kredit premium, uang muka fleksibel, serta suku bunga kompetitif yang disesuaikan untuk Anda.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center text-xs font-semibold text-amber-500 tracking-wider uppercase opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                        Layanan VIP <i class="fa-solid fa-circle-check ml-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer id="kontak" class="bg-slate-950 text-white pt-16 pb-8 border-t border-slate-900 relative">
+        <div class="container mx-auto px-4">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12 items-stretch">
+                
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-500 mb-4 tracking-wider">
+                            <i class="fa-solid fa-car-side mr-2"></i>MangDika<span class="text-white">Showroom</span>
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Tempat terbaik mencari mobil keluarga, motor matic, hingga motor petualang. Kunjungi lokasi showroom kami untuk melakukan inspeksi unit, test drive, dan negosiasi secara langsung dengan layanan VIP.
+                        </p>
+                        <div class="flex space-x-4 text-xl">
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-amber-500 hover:border-amber-500/50 transition duration-300"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-amber-500 hover:border-amber-500/50 transition duration-300"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-amber-500 hover:border-amber-500/50 transition duration-300"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-slate-900/60">
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-3">Jam Operasional</h4>
+                            <ul class="text-gray-400 space-y-1.5 text-xs">
+                                <li><strong class="text-white">Senin - Sabtu:</strong> 08.00 - 18.00 WIB</li>
+                                <li><strong class="text-white">Minggu:</strong> 10.00 - 16.00 WIB</li>
+                                <li class="text-amber-500 font-medium pt-1">*Hari libur buka dengan janji</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-3">Kontak Resmi</h4>
+                            <ul class="text-gray-400 space-y-2 text-xs">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-location-dot text-amber-500 mt-0.5 shrink-0"></i>
+                                    <span>Jl. TGH. Abdul Hafidz</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-phone text-amber-500 shrink-0"></i>
+                                    <span>(021) 555-1234</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 flex">
+                    <div class="w-full h-80 lg:h-auto min-h-[350px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 p-1.5 bg-slate-900 flex flex-1">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d823.0641794806927!2d116.154912202513!3d-8.639630353295514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1779342496937!5m2!1sid!2sid" 
+                            class="w-full h-full rounded-xl border-0 m-0 p-0 opacity-90 hover:opacity-100 transition-opacity duration-300" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-900 text-center text-xs text-gray-500 pt-8 mt-8">
+                <p>© 2026 MangDikaShowroom. All Rights Reserved. Built cleanly with VIP layout.</p>
+            </div>
+            
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
