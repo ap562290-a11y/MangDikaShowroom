@@ -12,9 +12,9 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-    <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
+    <nav class="relative bg-slate-900 text-white sticky top-0 z-50 shadow-md">
         <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
+            <div class="flex flex-wrap items-center justify-between gap-3">
                 <!-- Logo -->
                 <a href="#" class="text-2xl font-bold tracking-wider text-amber-500 flex-shrink-0">
                     <i class="fa-solid fa-car-side mr-2"></i>MangDika<span class="text-white">Showroom</span>
@@ -28,28 +28,30 @@
                     <a href="#kontak" class="hover:text-amber-500 transition">Kontak</a>
                 </div>
 
-                <!-- Auth Buttons (Desktop) -->
-                <div class="hidden lg:flex items-center gap-3">
-                    <button id="btn-login" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Masuk</button>
-                    <button id="btn-register" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-4 py-2 rounded-full text-sm font-semibold transition">Daftar</button>
-                    <button id="btn-dashboard" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Dashboard</button>
-                    <button id="btn-profile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Profil</button>
-                    <button id="btn-logout" class="hidden bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Keluar</button>
-                </div>
+                <div class="flex items-center gap-2 nav-actions">
+                    <!-- Auth Buttons (Desktop) -->
+                    <div class="hidden lg:flex items-center gap-3 nav-auth-desktop">
+                        <button id="btn-login" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Masuk</button>
+                        <button id="btn-register" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-4 py-2 rounded-full text-sm font-semibold transition">Daftar</button>
+                        <button id="btn-dashboard" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Dashboard</button>
+                        <button id="btn-profile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Profil</button>
+                        <button id="btn-logout" class="hidden bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Keluar</button>
+                    </div>
 
-                <!-- Auth Buttons (Mobile/Tablet) -->
-                <div class="lg:hidden flex items-center gap-2">
-                    <button id="btn-login-mobile" class="bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-xs transition">Masuk</button>
-                    <button id="btn-register-mobile" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-2 rounded-full text-xs font-semibold transition">Daftar</button>
-                    <button id="btn-dashboard-mobile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-xs transition">Dashboard</button>
-                    <button id="btn-profile-mobile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-xs transition">Profil</button>
-                    <button id="btn-logout-mobile" class="hidden bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-full text-xs transition">Keluar</button>
-                </div>
+                    <!-- Auth Buttons (Mobile/Tablet) -->
+                    <div class="lg:hidden flex items-center gap-2 nav-auth-mobile">
+                        <button id="btn-login-mobile" class="bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-[10px] md:text-xs transition">Masuk</button>
+                        <button id="btn-register-mobile" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-2 rounded-full text-[10px] md:text-xs font-semibold transition">Daftar</button>
+                        <button id="btn-dashboard-mobile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-[10px] md:text-xs transition">Dashboard</button>
+                        <button id="btn-profile-mobile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-[10px] md:text-xs transition">Profil</button>
+                        <button id="btn-logout-mobile" class="hidden bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-full text-[10px] md:text-xs transition">Keluar</button>
+                    </div>
 
-                <!-- Hamburger Menu Button (Mobile/Tablet) -->
-                <button id="hamburger-menu" class="lg:hidden text-white p-2 rounded-lg hover:bg-slate-800 transition ml-2">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
+                    <!-- Hamburger Menu Button (Mobile/Tablet) -->
+                    <button id="hamburger-menu" class="lg:hidden text-white p-2 rounded-lg hover:bg-slate-800 transition">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- Mobile/Tablet Navigation Menu -->

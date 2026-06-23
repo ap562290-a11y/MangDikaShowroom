@@ -58,6 +58,14 @@ nav {
     background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
 }
 
+nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
 nav button {
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -65,9 +73,101 @@ nav button {
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#mobile-menu {
+    background: rgba(15, 23, 42, 0.98);
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+#mobile-menu a {
+    color: #e2e8f0;
+}
+
+#mobile-menu a:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
 nav button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile/tabel nav items */
+@media (max-width: 1024px) {
+    .nav-actions {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    .nav-auth-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    #hamburger-menu {
+        order: 3;
+    }
+
+    .nav-auth-mobile button,
+    .nav-auth-desktop button {
+        white-space: nowrap;
+    }
+
+    #mobile-menu {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        padding: 0.75rem 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-auth-mobile {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        overflow-x: auto;
+    }
+
+    .nav-auth-mobile button {
+        min-width: 76px;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-auth-mobile {
+        margin-bottom: 0.25rem;
+    }
+
+    .nav-actions {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-auth-mobile button {
+        min-width: 90px;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .nav-auth-mobile {
+        justify-content: flex-start;
+    }
 }
 
 /* ===== CARDS & CONTAINERS ===== */
