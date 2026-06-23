@@ -1,80 +1,380 @@
-/* Pengaturan Efek Scroll Halus */
+/* =========================================
+   MANGDIKASHOWROOM - PREMIUM STYLING
+   Elegant, Modern, Luxury Design System
+   ========================================= */
+
+/* ===== GLOBAL STYLING ===== */
 html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Background Hero Section */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f59e0b, #d97706);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #d97706, #b45309);
+}
+
+/* ===== HEADER HERO SECTION ===== */
 .header-bg {
     background-image: url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/* Lingkaran Ikon di Bagian Keunggulan */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(51, 65, 85, 0.75) 100%);
+    z-index: 0;
+}
+
+/* ===== NAVIGATION & BUTTONS ===== */
+nav {
+    backdrop-filter: blur(20px);
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+}
+
+nav button {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+nav button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== CARDS & CONTAINERS ===== */
+.premium-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.7) 100%);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.premium-card:hover::before {
+    left: 100%;
+}
+
+.premium-card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border-color: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 20px 50px -20px rgba(245, 158, 11, 0.25);
+}
+
+/* ===== ICON STYLING ===== */
 .icon-circle {
     width: 4rem;
     height: 4rem;
-    background-color: #f59e0b; /* Warna Amber-500 */
-    color: #0f172a; /* Warna Slate-950 */
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #0f172a;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 9999px;
     font-weight: bold;
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px -6px rgba(245, 158, 11, 0.4);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Efek Interaktif Saat Kartu Keunggulan Disorot (Hover) */
-.animate-card:hover .icon-circle {
-    transform: scale(1.1) rotate(10deg);
-}
-
-.animate-card {
-    transition: all 0.3s ease;
-}
-
-.animate-card:hover {
-    background-color: #1e293b; /* Slate-800 menjadi sedikit lebih terang */
-    transform: translateY(-5px);
-}
-
-/* ==========================================
-   STYLE KEUNGGULAN PREMIUM & LUXURY
-   ========================================== */
-
-/* Kartu Utama Berbasis Glassmorphism */
-.premium-card {
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
-    border: 1px border;
-    border-color: rgba(51, 65, 85, 0.3);
-    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Efek Interaktif Ketika Kartu Disorot (Hover) */
-.premium-card:hover {
-    transform: translateY(-8px);
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
-    border-color: rgba(245, 158, 11, 0.4); /* Border berubah warna amber menyala halus */
-    box-shadow: 0 20px 40px -20px rgba(245, 158, 11, 0.15); /* Efek Amber Glow */
-}
-
-/* Kotak Wadah Ikon Mewah */
 .premium-icon-box {
     width: 3.5rem;
     height: 3.5rem;
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); /* Gradasi Emas/Amber */
-    color: #0f172a; /* Slate 950 */
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #0f172a;
     font-size: 1.35rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    box-shadow: 0 8px 20px -6px rgba(245, 158, 11, 0.4);
-    transition: all 0.4s ease;
+    box-shadow: 0 8px 24px -6px rgba(245, 158, 11, 0.5);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Efek Gerakan Ikon Saat Kartu Utama di Hover */
 .premium-card:hover .premium-icon-box {
-    transform: scale(1.05) rotate(5deg);
-    box-shadow: 0 12px 24px -6px rgba(245, 158, 11, 0.6);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 32px -6px rgba(245, 158, 11, 0.7);
+}
+
+.animate-card {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-card:hover .icon-circle {
+    transform: scale(1.15) rotate(10deg);
+}
+
+.animate-card:hover {
+    background-color: rgba(30, 41, 59, 0.8);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FORM STYLING ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    background: rgba(248, 250, 252, 0.95);
+    border: 1.5px solid rgba(203, 213, 225, 0.5);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    background: rgba(255, 255, 255, 1);
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    transform: translateY(-1px);
+}
+
+button[type="submit"],
+.btn-primary {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #0f172a;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 24px -6px rgba(245, 158, 11, 0.4);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -6px rgba(245, 158, 11, 0.6);
+    filter: brightness(1.1);
+}
+
+button[type="submit"]:active,
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* ===== SECTION STYLING ===== */
+section {
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.02) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ===== GRID ITEMS ===== */
+.grid {
+    gap: 1.5rem;
+}
+
+/* ===== SHADOWS & EFFECTS ===== */
+.shadow-premium {
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-luxury {
+    box-shadow: 0 25px 50px -25px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== TEXT GRADIENT ===== */
+.text-gradient {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ===== LINK STYLING ===== */
+a {
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #f59e0b;
+    text-decoration: none;
+}
+
+/* ===== BADGE STYLING ===== */
+.badge {
+    background: rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    color: #f59e0b;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 9999px;
+    backdrop-filter: blur(10px);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .premium-card {
+        border-radius: 12px;
+    }
+
+    .premium-icon-box {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.1rem;
+    }
+
+    button[type="submit"],
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* ===== ANIMATION KEYFRAMES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+/* ===== ADDITIONAL LUXURY EFFECTS ===== */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(245, 158, 11, 0.6);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.glow-effect {
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, select {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Enhanced hover effects for buttons */
+button:not(:disabled):hover,
+a:not(.nav-link):hover {
+    transform: translateY(-2px);
+}
+
+/* Active state for buttons */
+button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+/* ===== MOBILE MENU ANIMATIONS ===== */
+#mobile-menu {
+    animation: slideInLeft 0.3s ease-out;
+}
+
+/* ===== LUXURY SECTION DIVIDERS ===== */
+section::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.3), transparent);
+}
+
+/* ===== FOCUSED INPUT ENHANCEMENTS ===== */
+input:focus,
+select:focus {
+    animation: glow 2s ease-in-out;
 }

@@ -13,44 +13,81 @@
 <body class="bg-gray-50 text-gray-800 font-sans">
 
     <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold tracking-wider text-amber-500">
-                <i class="fa-solid fa-car-side mr-2"></i>MangDika<span class="text-white">Showroom</span>
-            </a>
-            <div class="hidden md:flex space-x-6 font-medium">
-                <a href="#" class="hover:text-amber-500 transition">Beranda</a>
-                <a href="#katalog" class="hover:text-amber-500 transition">Katalog</a>
-                <a href="#keunggulan" class="hover:text-amber-500 transition">Keunggulan</a>
-                <a href="#kontak" class="hover:text-amber-500 transition">Kontak</a>
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold tracking-wider text-amber-500 flex-shrink-0">
+                    <i class="fa-solid fa-car-side mr-2"></i>MangDika<span class="text-white">Showroom</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex space-x-8 font-medium">
+                    <a href="#" id="nav-home" class="hover:text-amber-500 transition">Beranda</a>
+                    <a href="#katalog" id="nav-katalog" class="hover:text-amber-500 transition">Katalog</a>
+                    <a href="#keunggulan" class="hover:text-amber-500 transition">Keunggulan</a>
+                    <a href="#kontak" class="hover:text-amber-500 transition">Kontak</a>
+                </div>
+
+                <!-- Auth Buttons (Desktop) -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <button id="btn-login" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Masuk</button>
+                    <button id="btn-register" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-4 py-2 rounded-full text-sm font-semibold transition">Daftar</button>
+                    <button id="btn-dashboard" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Dashboard</button>
+                    <button id="btn-profile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full text-sm transition">Profil</button>
+                    <button id="btn-logout" class="hidden bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Keluar</button>
+                </div>
+
+                <!-- Auth Buttons (Mobile/Tablet) -->
+                <div class="lg:hidden flex items-center gap-2">
+                    <button id="btn-login-mobile" class="bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-xs transition">Masuk</button>
+                    <button id="btn-register-mobile" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-2 rounded-full text-xs font-semibold transition">Daftar</button>
+                    <button id="btn-dashboard-mobile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-xs transition">Dashboard</button>
+                    <button id="btn-profile-mobile" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-full text-xs transition">Profil</button>
+                    <button id="btn-logout-mobile" class="hidden bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-full text-xs transition">Keluar</button>
+                </div>
+
+                <!-- Hamburger Menu Button (Mobile/Tablet) -->
+                <button id="hamburger-menu" class="lg:hidden text-white p-2 rounded-lg hover:bg-slate-800 transition ml-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
             </div>
-            <a href="https://wa.me/6281234567890" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2 transition text-sm">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi Kami
-            </a>
+
+            <!-- Mobile/Tablet Navigation Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4 border-t border-slate-800">
+                <a href="#" id="nav-home-mobile" class="block py-2 px-4 hover:bg-slate-800 rounded transition">Beranda</a>
+                <a href="#katalog" id="nav-katalog-mobile" class="block py-2 px-4 hover:bg-slate-800 rounded transition">Katalog</a>
+                <a href="#keunggulan" class="block py-2 px-4 hover:bg-slate-800 rounded transition">Keunggulan</a>
+                <a href="#kontak" class="block py-2 px-4 hover:bg-slate-800 rounded transition">Kontak</a>
+            </div>
         </div>
     </nav>
 
-    <header class="relative bg-slate-800 text-white py-24 md:py-32 overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-cover bg-center header-bg"></div>
-        <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
-            <span class="bg-amber-500 text-slate-950 text-xs font-bold uppercase px-3 py-1 rounded-full shadow">Pusat Kendaraan Berkualitas</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight">
-                Temukan Mobil & Motor Impian Anda di <span class="text-amber-500">MangDika</span>
-            </h1>
-            <p class="text-lg text-gray-300 mb-8">
-                Proses cepat, surat-surat dijamin aman, dan kondisi kendaraan siap pakai dengan garansi terbaik.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#katalog" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-3 rounded-lg transition shadow-lg">
-                    Mulai Cari Kendaraan
-                </a>
-                <a href="#kontak" class="border-2 border-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-3 rounded-lg transition">
-                    Lokasi Showroom
-                </a>
-            </div>
-        </div>
-    </header>
+    <div id="view-container">
+        <div id="home-view">
+            <header class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white py-24 md:py-32 overflow-hidden">
+                <div class="absolute inset-0 opacity-20 bg-cover bg-center header-bg"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
+                    <span class="inline-block bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-bold uppercase px-4 py-2 rounded-full shadow-lg shadow-amber-500/30 mb-6\">✨ Pusat Kendaraan Berkualitas</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold mt-6 mb-6 leading-tight\">
+                        Temukan Mobil & Motor Impian Anda di <span class=\"text-gradient\">MangDika</span>
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-10 leading-relaxed">
+                        Proses cepat, surat-surat dijamin aman, dan kondisi kendaraan siap pakai dengan garansi terbaik.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="#katalog" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-8 py-3 rounded-xl transition shadow-lg shadow-amber-500/40 transform hover:scale-105">
+                            <i class="fa-solid fa-magnifying-glass mr-2"></i>Mulai Cari Kendaraan
+                        </a>
+                        <a href="#kontak" class="border-2 border-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-3 rounded-xl transition transform hover:scale-105">
+                            <i class="fa-solid fa-location-dot mr-2"></i>Lokasi Showroom
+                        </a>
+                    </div>
+                </div>
+            </header>
 
-    <section id="katalog" class="container mx-auto px-4 py-16">
+    <main id="app-views">
+        <section id="katalog" class="container mx-auto px-4 py-16">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-slate-900">Katalog Kendaraan</h2>
             <p class="text-gray-500 mt-2">Gunakan filter di sebelah kiri untuk mempermudah pencarian Anda</p>
@@ -59,23 +96,23 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
             <div class="lg:col-span-1">
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 sticky top-24">
-                    <h3 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b flex items-center gap-2">
+                <div class="bg-white p-6 rounded-2xl shadow-luxury border border-gray-100 sticky top-24 backdrop-blur-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 pb-4 border-b-2 border-amber-500/20 flex items-center gap-2">
                         <i class="fa-solid fa-sliders text-amber-500"></i> Filter Pencarian
                     </h3>
                     
-                    <div class="space-y-4">
+                    <div class="space-y-5">
                         <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Cari Nama / Model</label>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Cari Nama / Model</label>
                             <div class="relative">
-                                <input type="text" id="filter-kata-kunci" placeholder="Ketik misal: Civic..." class="w-full bg-gray-50 border border-gray-300 rounded p-2 pl-8 focus:outline-none focus:border-amber-500 text-sm">
-                                <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-3 text-gray-400 text-xs"></i>
+                                <input type="text" id="filter-kata-kunci" placeholder="Ketik misal: Civic..." class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-lg px-3 py-2.5 pl-9 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition">
+                                <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-amber-500/60 text-xs"></i>
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Jenis Kendaraan</label>
-                            <select id="filter-jenis" class="w-full bg-gray-50 border border-gray-300 rounded p-2 focus:outline-none focus:border-amber-500 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Jenis Kendaraan</label>
+                            <select id="filter-jenis" class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition cursor-pointer">
                                 <option value="semua">Semua Jenis</option>
                                 <option value="mobil">Mobil Only</option>
                                 <option value="motor">Motor Only</option>
@@ -83,8 +120,8 @@
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Merek</label>
-                            <select id="filter-merek" class="w-full bg-gray-50 border border-gray-300 rounded p-2 focus:outline-none focus:border-amber-500 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Merek</label>
+                            <select id="filter-merek" class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition cursor-pointer">
                                 <option value="semua">Semua Merek</option>
                                 <option value="Toyota">Toyota</option>
                                 <option value="Honda">Honda</option>
@@ -93,8 +130,8 @@
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Kondisi</label>
-                            <select id="filter-kondisi" class="w-full bg-gray-50 border border-gray-300 rounded p-2 focus:outline-none focus:border-amber-500 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Kondisi</label>
+                            <select id="filter-kondisi" class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition cursor-pointer">
                                 <option value="semua">Semua Kondisi</option>
                                 <option value="baru">Baru</option>
                                 <option value="bekas">Bekas</option>
@@ -115,6 +152,167 @@
 
         </div>
     </section>
+    </main>
+    </div>
+    <div id="page-shell" class="hidden"></div>
+</div>
+
+<template id="login-template">
+    <section class="container mx-auto px-4 py-16" id="login-view">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl shadow-luxury border border-gray-100 overflow-hidden backdrop-blur-sm">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 px-8 py-10 text-white">
+                <h2 class="text-3xl font-bold">Masuk ke Akun</h2>
+                <p class="text-amber-200 mt-2 text-sm">Kelola permintaan unit dan profil Anda.</p>
+            </div>
+            <div class="p-8">
+                <form id="form-login" class="space-y-6">
+                    <div>
+                        <label for="login-email" class="block text-sm font-semibold text-slate-800 mb-3">Email Address</label>
+                        <input id="login-email" type="email" required class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition" placeholder="email@domain.com">
+                    </div>
+                    <div>
+                        <label for="login-password" class="block text-sm font-semibold text-slate-800 mb-3">Password</label>
+                        <input id="login-password" type="password" required class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition" placeholder="Masukkan kata sandi">
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-xl py-3 transition shadow-lg shadow-amber-500/30 mt-2">Masuk Sekarang</button>
+                </form>
+                <p class="text-center text-sm text-gray-600 mt-6">Belum punya akun? <button id="open-register-link" class="text-amber-600 font-semibold hover:text-amber-700 hover:underline">Daftar sekarang</button></p>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="register-template">
+    <section class="container mx-auto px-4 py-16" id="register-view">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl shadow-luxury border border-gray-100 overflow-hidden backdrop-blur-sm">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 px-8 py-10 text-white">
+                <h2 class="text-3xl font-bold">Daftar Akun Baru</h2>
+                <p class="text-amber-200 mt-2 text-sm">Buat akun untuk menyimpan data profil Anda.</p>
+            </div>
+            <div class="p-8">
+                <form id="form-register" class="space-y-6">
+                    <div>
+                        <label for="register-name" class="block text-sm font-semibold text-slate-800 mb-3">Nama Lengkap</label>
+                        <input id="register-name" type="text" required class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition" placeholder="Masukkan nama lengkap">
+                    </div>
+                    <div>
+                        <label for="register-email" class="block text-sm font-semibold text-slate-800 mb-3">Email Address</label>
+                        <input id="register-email" type="email" required class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition" placeholder="email@domain.com">
+                    </div>
+                    <div>
+                        <label for="register-password" class="block text-sm font-semibold text-slate-800 mb-3">Password</label>
+                        <input id="register-password" type="password" required class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition" placeholder="Buat kata sandi">
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-xl py-3 transition shadow-lg shadow-amber-500/30 mt-2">Daftar Sekarang</button>
+                </form>
+                <p class="text-center text-sm text-gray-600 mt-6">Sudah punya akun? <button id="open-login-link" class="text-amber-600 font-semibold hover:text-amber-700 hover:underline">Masuk di sini</button></p>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="dashboard-template">
+    <section class="container mx-auto px-4 py-16" id="dashboard-view">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-1 bg-white rounded-3xl shadow-xl border border-gray-200 p-6">
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-slate-900">Halo, <span id="dashboard-name">Pengguna</span></h3>
+                    <p class="text-gray-500 mt-2">Lihat ringkasan aktivitas dan profil Anda.</p>
+                </div>
+                <div class="space-y-4 text-sm text-slate-700">
+                    <div class="bg-slate-50 border border-gray-100 rounded-2xl p-4">
+                        <p class="font-semibold">Pesan Terakhir</p>
+                        <p class="text-gray-500 mt-2">Belum ada.</p>
+                    </div>
+                    <div class="bg-slate-50 border border-gray-100 rounded-2xl p-4">
+                        <p class="font-semibold">Status</p>
+                        <p class="text-gray-500 mt-2">Akun aktif.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-3 bg-white rounded-3xl shadow-luxury border border-gray-100 p-8 backdrop-blur-sm">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900">Dashboard Saya</h2>
+                        <p class="text-gray-500 mt-2 text-sm">Akses cepat ke katalog, kontak, dan profil.</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 border border-amber-200">
+                            <p class="text-3xl font-bold text-amber-600" id="stat-listings">16</p>
+                            <p class="text-xs uppercase tracking-widest text-amber-700 mt-2 font-semibold">Unit</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
+                            <p class="text-3xl font-bold text-blue-600" id="stat-contacts">1</p>
+                            <p class="text-xs uppercase tracking-widest text-blue-700 mt-2 font-semibold">Kontak</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 border border-purple-200">
+                            <p class="text-3xl font-bold text-purple-600" id="stat-saved">0</p>
+                            <p class="text-xs uppercase tracking-widest text-purple-700 mt-2 font-semibold">Favorit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-6 border border-amber-200 shadow-md">
+                        <h3 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2"><i class="fa-solid fa-zap text-amber-500"></i>Aktivitas Terbaru</h3>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="rounded-lg bg-white p-3 border border-amber-100 shadow-sm">Telusuri katalog untuk menemukan mobil atau motor impian.</li>
+                            <li class="rounded-lg bg-white p-3 border border-amber-100 shadow-sm">Hubungi kami untuk jadwal test drive.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 border border-slate-700 shadow-md">
+                        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2"><i class="fa-solid fa-lightbulb text-amber-400"></i>Tips Cepat</h3>
+                        <p class="text-sm text-gray-200 leading-relaxed">Coba filter berdasarkan merk, jenis, dan kondisi untuk mempercepat pencarian kendaraan impian Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="profile-template">
+    <section class="container mx-auto px-4 py-16" id="profile-view">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-1 bg-white rounded-3xl shadow-luxury border border-gray-100 p-8 backdrop-blur-sm">
+                <div class="text-center">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 flex items-center justify-center text-3xl font-black shadow-lg shadow-amber-500/30">U</div>
+                    <h3 class="text-xl font-bold text-slate-900 mt-6" id="profile-name">Nama Pengguna</h3>
+                    <p class="text-sm text-gray-500 mt-2" id="profile-email">email@domain.com</p>
+                </div>
+                <div class="mt-8 space-y-4 text-sm text-slate-700">
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
+                        <p class="font-semibold text-blue-900">Status Akun</p>
+                        <p class="text-blue-700 mt-1 text-sm">Terdaftar & Aktif</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-4 border border-purple-200">
+                        <p class="font-semibold text-purple-900">Tipe Pengguna</p>
+                        <p class="text-purple-700 mt-1 text-sm">Pembeli Premium</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-2 bg-white rounded-3xl shadow-luxury border border-gray-100 p-8 backdrop-blur-sm">
+                <div class="mb-8 pb-6 border-b-2 border-amber-500/20">
+                    <h2 class="text-3xl font-bold text-slate-900">Profil Saya</h2>
+                    <p class="text-gray-500 mt-2 text-sm">Perbarui informasi akun Anda kapan saja.</p>
+                </div>
+                <form id="form-profile" class="space-y-6">
+                    <div>
+                        <label for="profile-name-input" class="block text-sm font-semibold text-slate-800 mb-3">Nama Lengkap</label>
+                        <input id="profile-name-input" type="text" class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition" placeholder="Nama lengkap Anda">
+                    </div>
+                    <div>
+                        <label for="profile-email-input" class="block text-sm font-semibold text-slate-800 mb-3">Email Address</label>
+                        <input id="profile-email-input" type="email" readonly class="w-full bg-gray-100 border-1.5 border-gray-300 rounded-xl px-4 py-3 text-gray-500 text-sm cursor-not-allowed" placeholder="email@domain.com">
+                    </div>
+                    <div>
+                        <label for="profile-password-input" class="block text-sm font-semibold text-slate-800 mb-3">Ubah Password</label>
+                        <input id="profile-password-input" type="password" class="w-full bg-slate-50 border-1.5 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-amber-500 focus:bg-white focus:ring-2 focus:ring-amber-200 text-sm transition" placeholder="Kosongkan jika tidak ingin mengganti">
+                    </div>
+                    <button type="submit" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-xl py-3 px-8 transition shadow-lg shadow-amber-500/30">Simpan Perubahan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</template>
 
 <section id="keunggulan" class="relative bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 text-white py-24 overflow-hidden border-t border-slate-800">
         <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px] pointer-events-none"></div>
