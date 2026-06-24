@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangDika Showroom - Profil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-car"></i> MangDika <span>Showroom</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="katalog.html"><i class="fas fa-list"></i> Katalog</a></li>
+                <li><a href="promo.html"><i class="fas fa-tags"></i> Promo</a></li>
+                <li><a href="testdrive.html"><i class="fas fa-road"></i> Test Drive</a></li>
+                <li><a href="kontak.html"><i class="fas fa-phone"></i> Kontak</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-user"></i> Akun</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PROFIL / DASHBOARD ===== -->
+    <section class="profil-section">
+        <div class="container">
+            <div class="profil-container">
+                <!-- Sidebar -->
+                <aside class="profil-sidebar">
+                    <div class="user-profile">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 id="userName">Dika</h3>
+                        <p id="userEmail">dika332211@email.com</p>
+                        <span class="badge">Member Premium</span>
+                    </div>
+                    
+                    <nav class="profil-nav">
+                        <a href="#" class="active" data-section="dashboard">
+                            <i class="fas fa-th-large"></i> Dashboard
+                        </a>
+                        <a href="#" data-section="riwayat">
+                            <i class="fas fa-history"></i> Riwayat Transaksi
+                        </a>
+                        <a href="#" data-section="testdrive-history">
+                            <i class="fas fa-road"></i> Riwayat Test Drive
+                        </a>
+                        <a href="#" data-section="favorit">
+                            <i class="fas fa-heart"></i> Unit Favorit
+                        </a>
+                        <a href="#" data-section="profile-edit">
+                            <i class="fas fa-user-edit"></i> Edit Profil
+                        </a>
+                        <a href="#" id="btnLogout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Content -->
+                <main class="profil-content">
+                    <!-- Dashboard -->
+                    <div class="profil-section-content active" id="section-dashboard">
+                        <h2>Dashboard</h2>
+                        
+                        <div class="dashboard-stats">
+                            <div class="stat-box">
+                                <i class="fas fa-car"></i>
+                                <div>
+                                    <h3>3</h3>
+                                    <p>Unit Dibeli</p>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-road"></i>
+                                <div>
+                                    <h3>5</h3>
+                                    <p>Test Drive</p>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <h3>7</h3>
+                                    <p>Unit Favorit</p>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-tags"></i>
+                                <div>
+                                    <h3>2</h3>
+                                    <p>Promo Digunakan</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-activity">
+                            <h3>Aktivitas Terakhir</h3>
+                            <ul>
+                                <li><i class="fas fa-car"></i> Test Drive Toyota Avanza - 10 Jan 2026</li>
+                                <li><i class="fas fa-shopping-cart"></i> Pembelian Honda Beat - 5 Jan 2026</li>
+                                <li><i class="fas fa-heart"></i> Menambahkan BMW X5 ke favorit - 2 Jan 2026</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Riwayat Transaksi -->
+                    <div class="profil-section-content" id="section-riwayat">
+                        <h2>Riwayat Transaksi</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Unit</th>
+                                        <th>Harga</th>
+                                        <th>Metode</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>05/01/2026</td>
+                                        <td>Honda Beat</td>
+                                        <td>Rp 18.500.000</td>
+                                        <td>Tunai</td>
+                                        <td><span class="status success">Selesai</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20/12/2025</td>
+                                        <td>Toyota Avanza</td>
+                                        <td>Rp 285.000.000</td>
+                                        <td>Kredit</td>
+                                        <td><span class="status warning">Proses</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/11/2025</td>
+                                        <td>Vespa Primavera</td>
+                                        <td>Rp 48.000.000</td>
+                                        <td>Tunai</td>
+                                        <td><span class="status success">Selesai</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Riwayat Test Drive -->
+                    <div class="profil-section-content" id="section-testdrive-history">
+                        <h2>Riwayat Test Drive</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Unit</th>
+                                        <th>Jam</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10/01/2026</td>
+                                        <td>Toyota Avanza</td>
+                                        <td>10:00</td>
+                                        <td><span class="status success">Selesai</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>05/01/2026</td>
+                                        <td>Honda HR-V</td>
+                                        <td>14:00</td>
+                                        <td><span class="status success">Selesai</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>28/12/2025</td>
+                                        <td>BMW X5</td>
+                                        <td>09:00</td>
+                                        <td><span class="status pending">Menunggu</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Favorit -->
+                    <div class="profil-section-content" id="section-favorit">
+                        <h2>Unit Favorit</h2>
+                        <div class="favorit-grid">
+                            <div class="favorit-card">
+                                <i class="fas fa-car"></i>
+                                <h4>BMW X5</h4>
+                                <p>Rp 1.850.000.000</p>
+                                <button class="btn btn-small btn-primary">Lihat Detail</button>
+                            </div>
+                            <div class="favorit-card">
+                                <i class="fas fa-motorcycle"></i>
+                                <h4>Vespa Primavera</h4>
+                                <p>Rp 48.000.000</p>
+                                <button class="btn btn-small btn-primary">Lihat Detail</button>
+                            </div>
+                            <div class="favorit-card">
+                                <i class="fas fa-car"></i>
+                                <h4>Toyota Innova</h4>
+                                <p>Rp 350.000.000</p>
+                                <button class="btn btn-small btn-primary">Lihat Detail</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit Profil -->
+                    <div class="profil-section-content" id="section-profile-edit">
+                        <h2>Edit Profil</h2>
+                        <form id="editProfileForm">
+                            <div class="form-group">
+                                <label>Nama Lengkap</label>
+                                <input type="text" value="Dika">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" value="dika332211@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>No. HP</label>
+                                <input type="tel" value="0812-3456-7890">
+                            </div>
+                            <div class="form-group">
+                                <label>Alamat</label>
+                                <textarea rows="3">Jl. Contoh No. 456, Jakarta</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4><i class="fas fa-car"></i> MangDika Showroom</h4>
+                    <p>Showroom mobil & motor terpercaya sejak 2010.</p>
+                </div>
+                <div>
+                    <h4>Tautan</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="katalog.html">Katalog</a>
+                    <a href="promo.html">Promo</a>
+                    <a href="testdrive.html">Test Drive</a>
+                </div>
+                <div>
+                    <h4>Layanan</h4>
+                    <a href="#">Servis</a>
+                    <a href="#">Sparepart</a>
+                    <a href="#">Garansi</a>
+                    <a href="#">Asuransi</a>
+                </div>
+                <div>
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                    <p><i class="fab fa-whatsapp"></i> 0812-3456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@mangdika.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 MangDika Showroom. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

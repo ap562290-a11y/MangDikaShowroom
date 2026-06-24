@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangDika Showroom - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-car"></i> MangDika <span>Showroom</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="katalog.html"><i class="fas fa-list"></i> Katalog</a></li>
+                <li><a href="promo.html"><i class="fas fa-tags"></i> Promo</a></li>
+                <li><a href="testdrive.html"><i class="fas fa-road"></i> Test Drive</a></li>
+                <li><a href="kontak.html"><i class="fas fa-phone"></i> Kontak</a></li>
+                <li><a href="login.html" class="btn-login active"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== LOGIN / REGISTER ===== -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Tab Login/Register -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="register">Register</button>
+                </div>
+
+                <!-- ===== LOGIN FORM ===== -->
+                <div class="auth-form active" id="formLogin">
+                    <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+                    <p>Masuk ke akun MangDika Showroom Anda</p>
+                    
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="loginEmail" placeholder="email@contoh.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Password</label>
+                            <input type="password" id="loginPassword" placeholder="Masukkan password" required>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox">
+                                <input type="checkbox"> Ingat saya
+                            </label>
+                            <a href="#" class="forgot-password">Lupa password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </form>
+                </div>
+
+                <!-- ===== REGISTER FORM ===== -->
+                <div class="auth-form" id="formRegister">
+                    <h2><i class="fas fa-user-plus"></i> Register</h2>
+                    <p>Buat akun baru di MangDika Showroom</p>
+                    
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Nama Lengkap</label>
+                            <input type="text" id="regName" placeholder="Nama lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="regEmail" placeholder="email@contoh.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> No. HP</label>
+                            <input type="tel" id="regPhone" placeholder="0812-3456-7890" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Password</label>
+                            <input type="password" id="regPassword" placeholder="Minimal 8 karakter" required minlength="8">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-check-circle"></i> Konfirmasi Password</label>
+                            <input type="password" id="regConfirm" placeholder="Ulangi password" required>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="regAgree" required>
+                            <label for="regAgree">Saya setuju dengan <a href="#">Syarat & Ketentuan</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-user-plus"></i> Daftar Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4><i class="fas fa-car"></i> MangDika Showroom</h4>
+                    <p>Showroom mobil & motor terpercaya sejak 2010.</p>
+                </div>
+                <div>
+                    <h4>Tautan</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="katalog.html">Katalog</a>
+                    <a href="promo.html">Promo</a>
+                    <a href="testdrive.html">Test Drive</a>
+                </div>
+                <div>
+                    <h4>Layanan</h4>
+                    <a href="#">Servis</a>
+                    <a href="#">Sparepart</a>
+                    <a href="#">Garansi</a>
+                    <a href="#">Asuransi</a>
+                </div>
+                <div>
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                    <p><i class="fab fa-whatsapp"></i> 0812-3456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@mangdika.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 MangDika Showroom. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

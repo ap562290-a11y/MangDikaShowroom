@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangDika Showroom - Katalog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-car"></i> MangDika <span>Showroom</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="katalog.html" class="active"><i class="fas fa-list"></i> Katalog</a></li>
+                <li><a href="promo.html"><i class="fas fa-tags"></i> Promo</a></li>
+                <li><a href="testdrive.html"><i class="fas fa-road"></i> Test Drive</a></li>
+                <li><a href="kontak.html"><i class="fas fa-phone"></i> Kontak</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>📋 Katalog Unit</h1>
+            <p>Temukan mobil atau motor impian Anda di MangDika Showroom</p>
+        </div>
+    </section>
+
+    <!-- ===== FILTER ===== -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label><i class="fas fa-vehicle"></i> Jenis</label>
+                    <select id="filterJenis">
+                        <option value="all">Semua</option>
+                        <option value="mobil">Mobil</option>
+                        <option value="motor">Motor</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label><i class="fas fa-tag"></i> Merek</label>
+                    <select id="filterMerek">
+                        <option value="all">Semua Merek</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="honda">Honda</option>
+                        <option value="bmw">BMW</option>
+                        <option value="vespa">Vespa</option>
+                        <option value="yamaha">Yamaha</option>
+                        <option value="suzuki">Suzuki</option>
+                        <option value="mitsubishi">Mitsubishi</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label><i class="fas fa-money-bill"></i> Harga Max</label>
+                    <input type="number" id="filterHarga" placeholder="Rp 500.000.000">
+                </div>
+                <div class="filter-group">
+                    <label><i class="fas fa-calendar"></i> Tahun</label>
+                    <select id="filterTahun">
+                        <option value="all">Semua Tahun</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <button id="btnFilter" class="btn btn-primary"><i class="fas fa-search"></i> Cari</button>
+                    <button id="btnReset" class="btn btn-outline"><i class="fas fa-undo"></i> Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KATALOG GRID ===== -->
+    <section class="katalog-section">
+        <div class="container">
+            <div class="katalog-header">
+                <span id="totalUnit">Menampilkan 0 unit</span>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+            <div class="unit-grid" id="katalogGrid">
+                <!-- Unit akan di-load via JavaScript -->
+            </div>
+            <div class="pagination" id="pagination">
+                <!-- Pagination akan di-load via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4><i class="fas fa-car"></i> MangDika Showroom</h4>
+                    <p>Showroom mobil & motor terpercaya sejak 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Tautan</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="katalog.html">Katalog</a>
+                    <a href="promo.html">Promo</a>
+                    <a href="testdrive.html">Test Drive</a>
+                </div>
+                <div>
+                    <h4>Layanan</h4>
+                    <a href="#">Servis</a>
+                    <a href="#">Sparepart</a>
+                    <a href="#">Garansi</a>
+                    <a href="#">Asuransi</a>
+                </div>
+                <div>
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                    <p><i class="fab fa-whatsapp"></i> 0812-3456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@mangdika.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 MangDika Showroom. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

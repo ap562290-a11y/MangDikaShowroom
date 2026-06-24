@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangDika Showroom - Test Drive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-car"><span> MangDika </span>Showroom</i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="katalog.html"><i class="fas fa-list"></i> Katalog</a></li>
+                <li><a href="promo.html"><i class="fas fa-tags"></i> Promo</a></li>
+                <li><a href="testdrive.html" class="active"><i class="fas fa-road"></i> Test Drive</a></li>
+                <li><a href="kontak.html"><i class="fas fa-phone"></i> Kontak</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🚗 Jadwalkan Test Drive</h1>
+            <p>Rasakan sensasi berkendara sebelum memutuskan membeli. Gratis!</p>
+        </div>
+    </section>
+
+    <!-- ===== FORM TEST DRIVE ===== -->
+    <section class="testdrive-form">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-info">
+                    <h3><i class="fas fa-info-circle"></i> Informasi Test Drive</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Gratis biaya test drive</li>
+                        <li><i class="fas fa-check-circle"></i> Durasi 30-45 menit</li>
+                        <li><i class="fas fa-check-circle"></i> Pendampingan sales profesional</li>
+                        <li><i class="fas fa-check-circle"></i> Tersedia berbagai pilihan unit</li>
+                        <li><i class="fas fa-check-circle"></i> Bawa SIM yang masih berlaku</li>
+                    </ul>
+                    <div class="form-contact">
+                        <p><i class="fas fa-phone"></i> Atau hubungi kami: (021) 1234-5678</p>
+                    </div>
+                </div>
+
+                <form id="testDriveForm" class="form-main">
+                    <h3>Formulir Pemesanan</h3>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Nama Lengkap *</label>
+                        <input type="text" id="tdNama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> Nomor HP *</label>
+                        <input type="tel" id="tdPhone" placeholder="0812-3456-7890" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="tdEmail" placeholder="email@contoh.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-car"></i> Pilih Unit *</label>
+                        <select id="tdUnit" required>
+                            <option value="">-- Pilih Unit --</option>
+                            <option value="toyota-avanza">Toyota Avanza</option>
+                            <option value="toyota-innova">Toyota Innova</option>
+                            <option value="honda-hrv">Honda HR-V</option>
+                            <option value="honda-civic">Honda Civic</option>
+                            <option value="bmw-x5">BMW X5</option>
+                            <option value="vespa-primavera">Vespa Primavera</option>
+                            <option value="yamaha-nmax">Yamaha NMAX</option>
+                            <option value="honda-beat">Honda Beat</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar"></i> Tanggal *</label>
+                            <input type="date" id="tdDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-clock"></i> Jam *</label>
+                            <select id="tdTime" required>
+                                <option value="">-- Pilih Jam --</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-comment"></i> Catatan Tambahan</label>
+                        <textarea id="tdNotes" rows="3" placeholder="Tulis catatan atau pertanyaan..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="tdAgree" required>
+                        <label for="tdAgree">Saya setuju dengan syarat & ketentuan yang berlaku</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-calendar-check"></i> Kirim Permintaan Test Drive
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4><i class="fas fa-car"></i> MangDika Showroom</h4>
+                    <p>Showroom mobil & motor terpercaya sejak 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Tautan</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="katalog.html">Katalog</a>
+                    <a href="promo.html">Promo</a>
+                    <a href="testdrive.html">Test Drive</a>
+                </div>
+                <div>
+                    <h4>Layanan</h4>
+                    <a href="#">Servis</a>
+                    <a href="#">Sparepart</a>
+                    <a href="#">Garansi</a>
+                    <a href="#">Asuransi</a>
+                </div>
+                <div>
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                    <p><i class="fab fa-whatsapp"></i> 0812-3456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@mangdika.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 MangDika Showroom. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
